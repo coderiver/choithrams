@@ -1,0 +1,239 @@
+// header	
+.topper
+	background: #f6f6f6
+	border-bottom: 1px solid #f2f2f2
+	margin-bottom: 20px
+	.topper__menu
+		font-size: 0
+		text-align: right
+		li
+			display: inline-block
+			vertical-align: middle
+			margin-left: 30px 
+			a
+				display: inline-block
+				padding: 7px 0 
+				+mp
+				font-size: 12px
+				color: #626161
+				text-decoration: none
+				&:hover
+					text-decoration: underline
+.header
+	.header__in
+		+clr
+		margin-bottom: 20px
+	.header__user
+		float: right
+		width: 150px
+		+clr
+	.header__basket
+		float: right
+		width: 45px
+		height: 44px
+		padding-top: 10px
+		border-left: 1px solid #f2f2f2
+		text-align: right
+		a
+			display: inline-block 
+			font-size: 22px
+			color: #959ba0
+	.header__bottom
+		border-top: 1px solid #f5f5f5		 			
+		border-bottom: 1px solid #f5f5f5
+	.header__bottom-right
+		float: right
+		padding: 7px 0
+		a
+			font-size: 14px
+			color: #ff8730
+			text-decoration: none
+			+mpsb  			 			
+.logo
+	float: left
+	margin-right: 55px							
+.search
+	position: relative
+	float: left
+	+clr
+	input
+		float: left
+		width: 494px
+		height: 40px
+		line-height: 38px
+		padding: 0 20px 
+		border-radius: 5px 0 0 5px
+		background: #fefefe 
+		border: 1px solid #f2f2f2
+		border-right: none
+		box-shadow: inset 0.3px 5px 5px rgba(0, 0, 0, 0.02)
+		font-size: 13px
+		color: #000 
+		+placeholder
+			font-size: 13px
+			color: #989999
+	button
+		float: left
+		width: 44px
+		height: 40px
+		border-radius: 0 5px 5px 0
+		background: #ff8730
+		text-align: center
+		vertical-align: middle
+		font-size: 16px
+		color: #fff		
+.login
+	overflow: hidden
+	p
+		line-height: 1 
+	a
+		+mp
+		font-size: 15px
+		color: #505050
+		text-decoration: none
+		line-height: 1.2 
+		&.signup
+			color: #7ab317
+			font-size: 13px 
+.menu
+	float: left
+	.menu__btn
+		position: relative
+		width: 210px
+		height: 42px
+		border-right: 1px solid #f2f2f2 
+		padding-right: 45px
+		background: none
+		font-size: 15px
+		color: #696969
+		+mpsb 
+		transition: box-shadow 200ms
+		&:after
+			content: ""
+			position: absolute
+			top: 15px
+			right: 10px
+			+arr(10, 9, #7ab317, b)
+		&:hover, &.is-open
+			box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1)
+.dropdown
+	display: none
+	position: absolute
+	top: 44px
+	left: 0
+	right: 0
+	background: #fff
+	box-shadow: 0.3px 1px 7px rgba(0, 0, 0, 0.1)
+	z-index: 9
+	+clr
+	&:before
+		content: ""
+		position: absolute
+		top: -3px
+		left: 0
+		width: 210px
+		height: 5px
+		background: #fff
+		z-index: 10 
+	.dropdown__in
+		display: table
+		width: 100% 
+	.dropdown__col
+		display: table-cell
+		border-left: 1px solid #f5f5f5 
+		&.narrow
+			width: 210px
+		&.mid
+			width: 220px	
+	.dropdown__menu
+		li
+			position: relative
+			padding: 3px 19px 
+			font-size: 15px
+			color: #444
+			cursor: pointer
+			transition: color 200ms, background 200ms
+			&:after
+				content: ""
+				position: absolute
+				top: 50%
+				margin-top: -3px
+				right: 10px
+				+arr(4, 6, #8d9499, r) 
+			&:hover
+				color: #fff
+				background: #f78f1e
+				&:after
+					+arr(4, 6, #fff, r)
+	.dropdown__links
+		padding: 10px 0 
+		li
+			padding: 0 19px 
+			a
+				display: inline-block
+				font-size: 15px
+				color: #444
+				text-decoration: none
+	.dropdown__more
+		padding: 0 19px 20px
+		a
+			text-decoration: none
+			font-size: 15px
+			color: #48ab46 			  
+.submenu
+	float: left
+	+clr
+	li
+		float: left
+		padding: 7px 0 
+		a
+			display: inline-block
+			padding: 0 15px 
+			span, i
+				display: inline-block
+				vertical-align: middle
+				color: #505050 
+			span
+				font-size: 14px
+			i
+				font-size: 15px
+				margin-right: 10px  
+			&.offers
+				span, i
+					color: #fe4365 
+.brands
+	text-align: center
+	.brands__title
+		+mpsb
+		font-size: 16px
+		color: #444
+	.brands__list
+		font-size: 0
+		list-style-type: none 
+		li
+			display: inline-block
+			width: 215px
+			padding: 12px 0 
+			margin-bottom: 15px
+			border: 1px solid #e8e8e8
+			a
+				display: inline-block
+				text-decoration: none
+				img
+					max-width: 100%
+					margin-bottom: 5px
+				p
+					font-size: 13px
+					color: #68696a 
+
+
+
+
+
+
+
+
+
+
+
+
