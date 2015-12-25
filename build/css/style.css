@@ -302,7 +302,7 @@ body { min-width: 1240px; font-family: "VAGRoundedStdLight", sans-serif; font-st
 .item .item__img:before { content: ""; display: inline-block; vertical-align: middle; width: 0; height: 100%; }
 .item .item__img img { display: inline-block; vertical-align: middle; max-width: 100%; }
 .item .item__descr { min-height: 100px; }
-.item .item__title { margin-bottom: 15px; font-size: 14px; color: #6d6c6c; text-decoration: none; }
+.item .item__title { display: block; margin-bottom: 15px; font-size: 14px; color: #6d6c6c; text-decoration: none; }
 .item .item__discount { margin-bottom: 15px; font-size: 13px; color: #fe4365; }
 .item .item__price { *zoom: 1; margin-bottom: 15px; }
 .item .item__price:after { content: " "; display: table; clear: both; }
