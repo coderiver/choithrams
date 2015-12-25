@@ -20,6 +20,7 @@
 				&:hover
 					text-decoration: underline
 .header
+	position: relative
 	.header__in
 		+clr
 		margin-bottom: 20px
@@ -48,7 +49,18 @@
 			font-size: 14px
 			color: #ff8730
 			text-decoration: none
-			+mpsb  			 			
+			+mpsb
+	.out_wide &
+		overflow: hidden
+		&:after
+			content: ""
+			position: absolute
+			top: 0
+			left: 50%
+			margin-left: 380px
+			bottom: 0
+			width: 2000em
+			background: #fff  		  			 			
 .logo
 	float: left
 	margin-right: 55px							
@@ -121,7 +133,7 @@
 	position: absolute
 	top: 44px
 	left: 0
-	right: 0
+	width: 970px
 	background: #fff
 	box-shadow: 0.3px 1px 7px rgba(0, 0, 0, 0.1)
 	z-index: 9

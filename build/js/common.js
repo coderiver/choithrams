@@ -55,5 +55,45 @@ $(document).ready(function() {
 		arrows: true
 	});
 
+	// cart slider
+
+	$('.js-cart-slider').slick({
+		slidesToShow: 1,
+		slidesToScroll: 1,
+		arrows: true
+	});
+
+	// layout with sidebar
+
+	function sidebarPos(){
+		var leftPos = $('.content').offset().left,
+			contentWidth = $('.content').width();
+
+		var rightPos = leftPos + contentWidth + 30;
+
+		$('.sidebar').css({
+			'left': rightPos,
+			'right': 'auto'
+		});
+
+	}
+	sidebarPos();
+	$(window).resize(function(){
+		sidebarPos();
+	});
+
+	function fixedsidebar(){
+		var scroll_left = $(window).scrollLeft();
+		scroll_left = -scroll_left;
+		$('.sidebar').css({
+			'transform': 'translateX('+scroll_left+'px)'
+		});
+	}
+	$(window).scroll(function(){
+		fixedsidebar();
+	});
+
+
+
 
 });

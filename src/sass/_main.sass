@@ -278,12 +278,14 @@
 		+mpsb
 		text-align: center
 		font-size: 28px
-		color: #615b55 
+		color: #615b55
+	.item
+		padding-right: 30px	 
 
 .item
 	display: block
-	padding-right: 30px
 	.item__img
+		display: block
 		margin-bottom: 20px
 		height: 150px
 		+vertical
@@ -291,18 +293,28 @@
 			display: inline-block
 			vertical-align: middle
 			max-width: 100%
+	.item__descr
+		min-height: 100px		
 	.item__title
 		margin-bottom: 15px
 		font-size: 14px
 		color: #6d6c6c
+		text-decoration: none
 	.item__discount
 		margin-bottom: 15px 
 		font-size: 13px
 		color: #fe4365
 	.item__price
+		+clr
 		margin-bottom: 15px
-		font-size: 15px
-		color: #6d6c6c
+		span
+			float: left
+			font-size: 15px
+			color: #6d6c6c
+		small
+			float: right
+			font-size: 13px
+			color: #c2cbce 	
 	.item__buy
 		+clr
 		.spinner
@@ -350,7 +362,330 @@
 	+mp
 	color: #898989
 	p
-		margin-bottom: 10px 			 
+		margin-bottom: 10px 
+
+.banner-wide
+	margin-bottom: 30px 
+	img
+		display: block
+		width: 100%
+.categories
+	margin-bottom: 40px
+	font-size: 0
+	.categories__item
+		display: inline-block
+		vertical-align: top
+		width: 208px
+		padding: 15px
+		margin-left: 46px 
+		border: 1px solid #e8e8e8
+		text-align: center
+		text-decoration: none
+		transition: box-shadow 200ms
+		&:hover
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.08)
+		&:first-child
+			margin-left: 0
+	.categories__img
+		height: 160px
+		+vertical
+		img
+			display: inline-block
+			vertical-align: middle
+			max-width: 100%
+			max-height: 100% 
+	.categories__title
+		+mp
+		font-size: 16px
+		color: #444
+		margin-bottom: 5px
+	.categories__text
+		+mp
+		font-size: 12px
+		color: #888
+
+// catalog
+.catalog
+	position: relative
+	.catalog__topper
+		+clr
+		border: 1px solid #f2f2f2
+	.catalog__left
+		float: left
+		width: 200px
+		padding: 8px 19px 
+		+mp
+		font-size: 16px
+		color: #7b7a7a
+	.catalog__sort
+		float: left
+		padding: 10px 0 
+		font-size: 0
+		li
+			position: relative
+			display: inline-block
+			vertical-align: middle
+			padding-left: 17px
+			margin-left: 17px 
+			&:before
+				content: "|"
+				position: absolute
+				top: 0
+				left: 0
+				font-size: 14px
+				color: #8D9499
+			&:first-child
+				padding-left: 0
+				&:before
+					content: ""  
+			a
+				font-size: 14px
+				color: #8d9499
+				text-decoration: none
+				transition: color 200ms
+				&:hover, &.active
+					color: #f78f1e
+	.catalog__view
+		float: right
+		padding: 15px 18px 0 0
+		ul
+			font-size: 0
+			li
+				display: inline-block
+				vertical-align: middle
+				margin-left: 12px
+				&:first-child
+					margin-left: 0 
+				a
+					display: block
+					font-size: 12px
+					color: #615b55
+					opacity: 0.6
+					transition: opacity 200ms
+					&:hover, &.active
+						opacity: 1  				
+	.catalog__in
+		+clr
+	.catalog__filters
+		float: left
+		width: 200px
+	.catalog__list
+		overflow: hidden
+		font-size: 0
+		.item
+			display: inline-block
+			vertical-align: top
+			width: 160px
+			margin: 0 16px 40px 
+		
+.filters
+	border: 1px solid #f2f2f2
+	border-top: none 
+	.filters__item
+		padding: 3px 20px 
+		border-top: 1px solid #f2f2f2
+		&:first-child
+			border-top: none 								   	 			  				 
+
+// sidebar
+.out_wide
+	.content, .center
+		max-width: 1240px
+		padding-right: 270px	
+.sidebar
+	position: fixed
+	top: 0
+	bottom: 0
+	width: 240px
+	background: #fff
+	border-left: 1px solid #e6e6e6
+	border-right: 1px solid #e6e6e6
+	z-index: 10
+	.sidebar__in
+		position: relative
+		height: 100% 
+		
+.cart
+	position: relative
+	height: 100%
+	padding: 45px 0 105px		
+	.cart__topper
+		position: absolute
+		top: 0
+		left: 0
+		right: 0
+		height: 45px
+		padding: 13px 15px 13px 50px 
+		background: #48ab46
+		text-align: right
+		+mp
+		font-size: 15px
+		color: #f3f3f3 
+		&:before
+			content: "\EA02"
+			position: absolute
+			top: 12px
+			left: 15px
+			@extend %icon
+			font-size: 20px
+			color: #f3f3f3  	 
+	.cart__wrap
+		height: 100%
+		overflow-y: auto
+		padding: 23px 0 
+	.cart__bottom
+		position: absolute
+		bottom: 0
+		left: 0
+		right: 0
+		height: 105px
+		.btn
+			display: block
+			height: 44px
+			border-radius: 0
+			width: 100%
+			text-decoration: none
+			text-align: center
+			line-height: 44px
+			font-size: 18px
+	.cart__login
+		border-top: 1px solid #e6e6e6
+		padding: 11px 10px
+		font-size: 14px
+		color: #727272
+		+mp
+		a
+			text-decoration: none
+			color: #26ade4
+	.cart__list
+		padding: 0 10px
+	.cart__item
+		+clr
+		margin-top: 40px
+		&:first-child
+			margin-top: 0 
+		.counter
+			float: left
+			width: 22px
+			margin-right: 12px
+	.cart__info
+		+clr
+	.cart__img
+		float: left
+		width: 65px
+		img
+			max-width: 100%
+	.cart__details
+		overflow: hidden
+		font-size: 13px
+		color: #6d6c6c
+	.cart__title
+		margin-bottom: 20px	
+	.cart__discount
+		margin-bottom: 20px
+		color: #fe4365
+	.cart__price
+		margin-bottom: 15px
+		font-size: 14px
+		text-transform: uppercase
+	.cart__add
+		display: inline-block
+		font-size: 0
+		color: #505050
+		text-decoration: none
+		background: none 
+		i, span
+			display: inline-block
+		span
+			font-size: 13px
+			margin-left: 10px 
+		i
+			font-size: 14px 				 			
+.counter
+	position: relative
+	text-align: center
+	button
+		background: none
+		font-size: 5px
+		color: #989898
+	.counter__value
+		padding: 6px 0
+		font-size: 12px
+		color: #505050
+		+mp
+.reserve
+	+clr
+	margin-bottom: 18px
+	.reserve__left
+		position: relative
+		float: left
+		text-align: center
+		width: 66px
+		i
+			font-size: 24px
+			color: #000
+	.reserve__right
+		overflow: hidden
+		font-size: 14px
+		color: #6d6c6c
+		+mp
+		p
+			margin-bottom: 10px
+	.reserve__btn
+		height: 30px
+		padding: 0 13px 
+		vertical-align: middle
+		border-radius: 4px
+		background: #f78f1e
+		+mp
+		font-size: 14px
+		color: #fff
+.total
+	position: relative
+	padding: 10px
+	margin-bottom: 30px
+	background: #fefcee
+	.total__row
+		+clr
+		font-size: 14px
+		color: #505050  
+		&:first-child
+			margin-bottom: 15px
+			font-size: 17px
+			+mpsb
+	.total__col
+		float: right
+		&:first-child
+			float: left
+.cart-slider
+	position: relative
+	padding: 30px 0 
+	.cart-slider__item			
+		+clr
+		padding: 0 30px
+		& > a
+			display: block
+			text-decoration: none
+	.cart-slider__img
+		float: left
+		width: 65px
+		img
+			max-width: 90%
+	.cart-slider__title
+		overflow: hidden
+		font-size: 13px
+		color: #6d6c6c 	
+
+
+
+
+
+
+
+
+
+
+
 
 
 
