@@ -271,20 +271,17 @@
 					vertical-align: middle
 					padding: 0 20px 
 					&:first-child
-						text-align: left					 
+						text-align: left	
+										 
 .item-slider-wrap
-	.item-slider__title
-		margin-bottom: 40px
-		+mpsb
-		text-align: center
-		font-size: 28px
-		color: #615b55
+	margin-bottom: 50px
 	.item
 		padding-right: 30px	 
 
 .item
 	display: block
 	.item__img
+		position: relative
 		display: block
 		margin-bottom: 20px
 		height: 150px
@@ -322,7 +319,18 @@
 			float: left
 		.btn
 			float: right
-			padding: 0 8px 	 	 	  		
+			padding: 0 8px
+.winter-action
+	position: absolute
+	top: 0
+	right: 0
+	width: 30px
+	height: 30px
+	padding: 5px 0 0 2px 
+	border-radius: 50%
+	background: #65d2d7
+	font-size: 19px
+	color: #fff   			 	 	 	  		
 
 // footer
 .footer
@@ -365,11 +373,17 @@
 	p
 		margin-bottom: 10px 
 
-.banner-wide
+.banner
+	+clr
 	margin-bottom: 30px 
 	img
 		display: block
 		width: 100%
+	.banner__col
+		float: right
+		width: 478px
+		&:first-child
+			float: left 	
 .categories
 	margin-bottom: 40px
 	font-size: 0
@@ -675,13 +689,85 @@
 	.cart-slider__title
 		overflow: hidden
 		font-size: 13px
-		color: #6d6c6c 	
+		color: #6d6c6c
 
+.main-slider
+	position: relative
+	margin-bottom: 60px
 
-
-
-
-
+.post-list
+	.post-list__wrap
+		+clr
+		padding: 0 40px 
+		.post
+			float: left
+			width: 50%
+			padding-right: 20px
+			margin-bottom: 55px
+	.post-list__more
+		text-align: center
+		a
+			+os
+			text-transform: uppercase
+			color: #333
+			font-size: 11px 		
+			&:hover
+				text-decoration: none
+.post
+	position: relative
+	+clr
+	.post__img
+		float: left
+		width: 80px
+		margin-right: 30px
+		img
+			display: block
+			width: 100% 
+	.post__content
+		overflow: hidden
+	.post__title
+		display: inline-block
+		margin-bottom: 15px
+		font-size: 19px
+		color: #525252
+		text-decoration: none
+	.post__details
+		margin-bottom: 5px
+		font-size: 11px
+		color: #b8b8b8
+		font-style: italic
+	.post__text
+		font-size: 13px
+		color: #898989
+		+os
+	.post__more
+		position: relative
+		display: inline-block
+		padding-right: 27px
+		+os
+		font-size: 13px
+		color: #898989
+		text-decoration: none
+		text-transform: uppercase 
+		&:before
+			content: ""
+			position: absolute
+			top: 50%
+			right: 0
+			width: 18px
+			height: 18px
+			margin-top: -9px 
+			border-radius: 50%
+			border: 1px solid #95a83f
+		&:after
+			content: "\EA16"
+			position: absolute
+			top: 5px
+			right: 6px
+			@extend %icon
+			font-size: 8px
+			color: #95a83f
+			 	 	 		
 
 
 

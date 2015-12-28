@@ -87,6 +87,14 @@ $(document).ready(function() {
 		arrows: true
 	});
 
+	// main slider
+
+	$('.js-slider').slick({
+		dots: true,
+		slidesToShow: 1,
+		slidesToScroll: 1
+	});
+
 	// layout with sidebar
 
 	function sidebarPos(){
@@ -101,9 +109,13 @@ $(document).ready(function() {
 		});
 
 	}
-	sidebarPos();
-	$(window).resize(function(){
+	if ($('.sidebar').length) {
 		sidebarPos();
+	};
+	$(window).resize(function(){
+		if ($('.sidebar').length) {
+			sidebarPos();
+		};
 	});
 
 	function fixedsidebar(){
@@ -114,7 +126,9 @@ $(document).ready(function() {
 		});
 	}
 	$(window).scroll(function(){
-		fixedsidebar();
+		if ($('.sidebar').length) {
+			fixedsidebar();
+		};
 	});
 
 
